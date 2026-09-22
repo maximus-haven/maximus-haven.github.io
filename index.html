@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="es">
 <head>
+<script>/* theme: dark by default, unless the visitor chose light */try{if(localStorage.getItem("mh-theme")!=="light")document.documentElement.setAttribute("data-theme","dark")}catch(e){document.documentElement.setAttribute("data-theme","dark")}</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="Maximus Haven — restaurante y cafetería filipina en Tetuán, Madrid. Lomi, sisig, halo-halo. C/ Marqués de Cortina 2.">
 <link rel="canonical" href="https://maximus-haven.github.io/">
-<meta name="theme-color" content="#E0452B">
+<meta name="theme-color" content="#141210">
 
 <!-- Vista previa al compartir en WhatsApp, Facebook, Instagram -->
 <meta property="og:type" content="website">
@@ -699,7 +700,7 @@ document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",
 const tt=document.getElementById("theme-toggle");
 function setTheme(t){ if(t==="dark") document.documentElement.setAttribute("data-theme","dark"); else document.documentElement.removeAttribute("data-theme"); try{ localStorage.setItem("mh-theme",t); }catch(e){} }
 tt.addEventListener("click",()=>setTheme(document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark"));
-try{ if(localStorage.getItem("mh-theme")==="dark") setTheme("dark"); }catch(e){}
+try{ setTheme(localStorage.getItem("mh-theme")==="light" ? "light" : "dark"); }catch(e){ setTheme("dark"); }
 let saved=null; try{ saved=localStorage.getItem("mh-lang"); }catch(e){}
 if(saved && I18N[saved]) setLang(saved);
 </script>
