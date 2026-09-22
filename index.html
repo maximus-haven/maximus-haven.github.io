@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Maximus Haven — restaurante y cafetería filipina en Tetuán, Madrid. Lomi, sisig, halo-halo. C/ Marqués de Cortina 2.">
+<link rel="canonical" href="https://maximus-haven.github.io/">
+<meta name="theme-color" content="#E0452B">
+
+<!-- Vista previa al compartir en WhatsApp, Facebook, Instagram -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Maximus Haven">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:url" content="https://maximus-haven.github.io/">
+<meta property="og:title" content="Maximus Haven · Restaurante filipino en Tetuán, Madrid">
+<meta property="og:description" content="Lomi, Sisig Max y el mejor Halo-Halo de Madrid. Cocina filipina hecha en casa, en memoria de nuestro hijo Maximus. C/ Marqués de Cortina 2.">
+<meta property="og:image" content="https://maximus-haven.github.io/img/lomi.jpg">
+<meta property="og:image:width" content="1400">
+<meta property="og:image:height" content="1050">
+<meta property="og:image:alt" content="Bol de lomi con huevo, chicharrón y lumpia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Maximus Haven · Restaurante filipino en Tetuán, Madrid">
+<meta name="twitter:description" content="Lomi, Sisig Max y el mejor Halo-Halo de Madrid. Cocina filipina hecha en casa.">
+<meta name="twitter:image" content="https://maximus-haven.github.io/img/lomi.jpg">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- Datos para Google (ficha de restaurante) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Maximus Haven restaurante & cafetería",
+  "url": "https://maximus-haven.github.io/",
+  "image": [
+    "https://maximus-haven.github.io/img/lomi.jpg",
+    "https://maximus-haven.github.io/img/sisig.jpg",
+    "https://maximus-haven.github.io/img/halo.jpg"
+  ],
+  "description": "Restaurante y cafetería familiar filipina en el barrio de Tetuán, Madrid. Lomi, sisig, pancit y halo-halo caseros.",
+  "servesCuisine": ["Filipina", "Asiática"],
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "telephone": "+34910426268",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle Marqués de Cortina, 2",
+    "addressLocality": "Madrid",
+    "addressRegion": "Comunidad de Madrid",
+    "postalCode": "28020",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 40.4636123,
+    "longitude": -3.6938153
+  },
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=Maximus+Haven+Calle+Marqu%C3%A9s+de+Cortina+2+28020+Madrid",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "18:00", "closes": "23:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "13:00", "closes": "23:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "15:00", "closes": "23:00" }
+  ],
+  "acceptsReservations": true,
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61576300011624",
+    "https://www.instagram.com/maximushaven.ofc/"
+  ]
+}
+</script>
+
+<title>Maximus Haven</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+html{-webkit-text-size-adjust:100%}
+
+:root{
+  /* fresh & bright: white ground, the food supplies the colour */
+  --bg:#FFFCF7; --surface:#FFFFFF; --surface-2:#FFF4E6;
+  --ink:#1B1A17; --muted:#6C665E; --line:#EFE6D8;
+  --gold:#F0A928; --ube:#7A4FB5; --leaf:#2E9E5B; --chili:#E0452B;
+  --dark:#1B1A17; --dark-2:#2A2622; --on-dark:#FFF8EE; --on-dark-muted:#C9BFB2;
+  --shadow:0 24px 60px -24px rgba(27,26,23,.35);
+  --r:22px; --r-sm:12px;
+  /* theme-dependent */
+  --fade:255,252,247;            /* colour photos fade into (rgb) */
+  --strip:var(--chili); --strip-ink:#fff; --strip-soft:#FFE1B3; --strip-muted:rgba(255,255,255,.8);
+  --map:var(--surface-2); --map-ink:var(--ink); --map-muted:var(--muted); --map-grid:rgba(27,26,23,.06);
+  --card-glass:94%;
+  color-scheme:light;
+}
+:root[data-theme="dark"]{
+  --bg:#141210; --surface:#1E1B18; --surface-2:#26211C;
+  --ink:#F6F0E6; --muted:#B4AA9D; --line:#332D27;
+  --gold:#F3B54A; --ube:#B08CE6; --leaf:#5FC585; --chili:#F0664C;
+  --dark:#0D0C0B; --dark-2:#181614; --shadow:0 24px 60px -24px rgba(0,0,0,.7);
+  --fade:15,10,6;
+  --strip:var(--dark); --strip-ink:var(--on-dark); --strip-soft:var(--gold); --strip-muted:var(--on-dark-muted);
+  --map:var(--dark); --map-ink:var(--on-dark); --map-muted:var(--on-dark-muted); --map-grid:rgba(255,255,255,.05);
+  --card-glass:88%;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:500;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0}
+a{color:inherit}
+img,svg{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:20px}
+.eyebrow{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--chili)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem;border:1px solid transparent;transition:transform .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn.gold{background:var(--chili);color:#fff}
+.btn.dark{background:var(--ink);color:var(--bg)}
+.btn.line{border-color:var(--line);color:var(--ink)}
+.btn.line-light{border-color:rgba(255,255,255,.3);color:var(--on-dark)}
+
+/* nav */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;padding-block:14px}
+.top .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;background:color-mix(in srgb,var(--surface) 82%,transparent);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:999px;padding:8px 8px 8px 16px;box-shadow:0 8px 30px -18px rgba(0,0,0,.35)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Fraunces",serif;font-weight:600;font-size:1.05rem}
+.brand svg{width:26px;color:var(--gold)}
+.brand text{font-family:"Fraunces",serif;font-weight:600;font-size:38px;fill:currentColor}
+nav.links{display:flex;gap:4px}
+nav.links a{text-decoration:none;color:var(--muted);font-weight:600;font-size:.9rem;padding:8px 12px;border-radius:999px}
+nav.links a:hover{color:var(--ink);background:var(--surface-2)}
+.lang{display:flex;background:var(--surface-2);border-radius:999px;padding:3px}
+.lang button{border:0;background:transparent;color:var(--muted);font:inherit;font-weight:700;font-size:.78rem;padding:6px 11px;cursor:pointer;border-radius:999px}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.theme{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);display:grid;place-items:center;cursor:pointer;padding:0}
+.theme svg{width:16px;height:16px}
+.theme .moon{display:none}
+:root[data-theme="dark"] .theme .sun{display:none}
+:root[data-theme="dark"] .theme .moon{display:block}
+.controls{display:flex;align-items:center;gap:8px}
+@media (max-width:820px){nav.links{display:none}}
+
+/* hero — full-bleed photograph */
+.top{margin-bottom:-78px;position:sticky}
+.hero{position:relative;min-height:min(92vh,880px);display:grid;align-items:end;overflow:clip;background:var(--bg);color:var(--ink);isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:78% 45%;transform-origin:center}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(var(--fade),.96) 0%,rgba(var(--fade),.86) 34%,rgba(var(--fade),.35) 58%,rgba(var(--fade),0) 78%),linear-gradient(180deg,rgba(var(--fade),.55) 0%,rgba(var(--fade),0) 22%,rgba(var(--fade),0) 70%,rgba(var(--fade),.9) 100%)}
+.hero-copy{position:relative;z-index:1;width:100%;padding-block:140px 56px;max-width:1160px}
+.hero .eyebrow{color:var(--chili)}
+.hero h1{font-size:clamp(2.6rem,6.4vw,5.6rem);margin-top:14px;max-width:16ch;color:var(--ink)}
+.hero h1 em{font-style:italic;font-weight:300;color:var(--chili)}
+.hero .lead{font-size:1.12rem;color:var(--muted);max-width:44ch;margin-top:20px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.proof{display:flex;flex-wrap:wrap;gap:22px;margin-top:34px;padding-top:22px;border-top:1px solid var(--line)}
+.proof div{display:grid;gap:2px}
+.proof b{font-family:"Fraunces",serif;font-weight:600;font-size:1.5rem;letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--ink)}
+.proof small{font-size:.8rem;color:var(--muted)}
+.proof .stars{color:var(--gold);font-size:.9rem;letter-spacing:.06em}
+@media (max-width:820px){.hero-copy{padding-block:120px 40px}}
+.dish{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+
+/* dish chapters — full-bleed photo, floating card */
+.chapter{position:relative;min-height:min(100vh,820px);display:grid;align-items:center;overflow:clip;background:var(--surface-2);margin-top:8px}
+.chapter .ch-media{position:absolute;inset:0}
+.chapter .ch-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(var(--fade),.55) 0%,rgba(var(--fade),.15) 42%,rgba(var(--fade),0) 65%)}
+.chapter.flip .ch-media::after{background:linear-gradient(270deg,rgba(var(--fade),.55) 0%,rgba(var(--fade),.15) 42%,rgba(var(--fade),0) 65%)}
+.chapter .ch-card{position:relative;z-index:1;margin:80px 20px;max-width:460px;background:color-mix(in srgb,var(--surface) var(--card-glass),transparent);backdrop-filter:blur(18px);border-radius:var(--r);padding:32px;display:grid;gap:10px;box-shadow:var(--shadow);border-top:6px solid var(--accent)}
+@media (min-width:1200px){.chapter .ch-card{margin-inline:calc((100% - 1120px)/2)}}
+.chapter.flip{justify-items:end}
+.chapter .tag{justify-self:start;background:var(--accent);color:var(--accent-ink);font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 10px;border-radius:999px}
+.chapter .kind{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.chapter h3{font-size:clamp(2.2rem,4.5vw,3.6rem)}
+.chapter .bar{width:64px;height:5px;border-radius:3px;background:var(--accent);transform-origin:left}
+.chapter .ch-card:hover{transform:translateY(-2px)}
+.chapter p{color:var(--muted);font-size:1.05rem}
+.chapter .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.chapter .meta span{font-size:.78rem;font-weight:700;background:var(--surface-2);border-radius:999px;padding:5px 10px}
+@media (max-width:820px){.chapter{min-height:auto;align-items:end;aspect-ratio:3/4}.chapter .ch-card{margin:16px;padding:22px;max-width:none}.chapter .ch-media::after,.chapter.flip .ch-media::after{background:none}}
+#menu .wrap + .chapter{margin-top:0}
+#menu > .wrap:last-child{padding-top:40px}
+
+/* hours strip */
+.strip{background:var(--strip);color:var(--strip-ink)}
+.strip .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;padding-block:22px}
+.strip .label{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--strip-soft)}
+.strip .label small{display:block;color:var(--strip-muted);letter-spacing:0;text-transform:none;font-weight:500;font-size:.78rem;margin-top:4px}
+.hours{display:flex;flex-wrap:wrap;gap:8px 28px;font-variant-numeric:tabular-nums;font-size:.95rem}
+.hours span b{color:var(--strip-muted);font-weight:600;margin-right:8px}
+.hours span.closed{color:var(--strip-soft)}
+.strip .addr{font-size:.9rem;color:var(--strip-muted);text-align:right}
+.strip .addr strong{color:var(--strip-ink);display:block}
+@media (max-width:820px){.strip .wrap{grid-template-columns:1fr;gap:14px}.strip .addr{text-align:left}}
+
+/* sections */
+section{padding-block:96px}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:32px;align-items:end;margin-bottom:48px}
+.sec-head h2{font-size:clamp(2rem,4vw,3.1rem);margin-top:10px}
+.sec-head p{color:var(--muted);max-width:60ch;font-size:1.05rem}
+@media (max-width:720px){section{padding-block:64px}.sec-head{grid-template-columns:1fr;gap:12px;margin-bottom:32px}}
+
+/* dedication — warm and quiet, not dark */
+.dedication{background:var(--surface-2);color:var(--ink);position:relative;overflow:clip}
+.dedication::before{content:"M";position:absolute;right:-2vw;top:-8vw;font-family:"Fraunces",serif;font-weight:600;font-size:38vw;line-height:1;color:rgba(240,169,40,.12);pointer-events:none}
+.dedication .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:center;position:relative}
+.dedication .eyebrow{color:var(--chili)}
+.dedication .name{font-family:"Fraunces",serif;font-weight:300;font-style:italic;font-size:clamp(3.6rem,9vw,7.5rem);line-height:.95;letter-spacing:-.03em;margin-top:14px;color:var(--ink)}
+.dedication .crest{width:56px;color:var(--gold);margin-bottom:26px}
+.dedication .crest text{font-family:"Fraunces",serif;font-weight:600;font-size:36px;fill:currentColor}
+.dedication .text{display:grid;gap:18px;font-size:1.1rem;line-height:1.7;color:var(--muted);max-width:58ch}
+.dedication .text p:first-child{font-family:"Fraunces",serif;font-size:1.5rem;line-height:1.3;color:var(--ink);font-weight:500}
+.dedication .fill{border:1px dashed var(--gold);border-radius:var(--r-sm);padding:16px 18px;font-size:.92rem;background:var(--surface)}
+.dedication .fill b{color:var(--ink)}
+@media (max-width:820px){.dedication .wrap{grid-template-columns:1fr;gap:28px}}
+
+/* story */
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px;display:grid;gap:10px;align-content:start}
+.stage .yr{font-family:"Fraunces",serif;font-weight:600;font-size:2rem;letter-spacing:-.02em;color:var(--chili)}
+.stage h3{font-size:1.2rem}
+.stage p{color:var(--muted);font-size:.97rem}
+@media (max-width:820px){.timeline{grid-template-columns:1fr}}
+
+/* menu */
+.featured{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feat{border-radius:var(--r);overflow:hidden;background:var(--surface);border:1px solid var(--line);display:grid;grid-template-rows:auto 1fr;transition:transform .2s ease,box-shadow .2s ease}
+.feat .img{position:relative;aspect-ratio:1;background:var(--dark-2);overflow:hidden}
+.feat .img svg.dish{position:absolute;inset:0;width:100%;height:100%}
+.feat .img .tag{position:absolute;top:14px;left:14px;background:var(--gold);color:#1C1512;font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 10px;border-radius:999px}
+.feat .body{padding:22px 24px 26px;display:grid;gap:8px}
+.feat h3{font-size:1.45rem}
+.feat .kind{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--ube)}
+.feat p{color:var(--muted);font-size:.97rem}
+.feat .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+.feat .meta span{font-size:.78rem;font-weight:700;background:var(--surface-2);border-radius:999px;padding:5px 10px}
+.more{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.more .item{display:flex;gap:14px;align-items:flex-start;padding:18px 20px;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--surface)}
+.more .item .dot{flex:0 0 10px;width:10px;height:10px;border-radius:50%;background:var(--leaf);margin-top:8px}
+.more h3{font-size:1.05rem;font-family:"Manrope",sans-serif;font-weight:800;letter-spacing:0}
+.more p{color:var(--muted);font-size:.9rem;margin-top:4px}
+.menu-foot{margin-top:28px;display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;background:var(--surface-2);border-radius:var(--r);padding:24px 28px}
+.menu-foot .price{font-family:"Fraunces",serif;font-weight:600;font-size:2rem;letter-spacing:-.02em}
+.menu-foot p{color:var(--muted);font-size:.95rem}
+.badge-pending{font-size:.78rem;font-weight:700;color:var(--muted);border:1px dashed var(--line);border-radius:999px;padding:8px 14px;white-space:nowrap}
+@media (prefers-reduced-motion:no-preference){.feat:hover{transform:translateY(-4px);box-shadow:var(--shadow)}}
+@media (max-width:900px){.featured{grid-template-columns:1fr}.feat{grid-template-columns:1fr}.more{grid-template-columns:1fr}.menu-foot{grid-template-columns:1fr;gap:12px}}
+
+/* reviews */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rev{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px;display:grid;gap:12px;align-content:start}
+.rev .stars{color:var(--gold);letter-spacing:.12em;font-size:.85rem}
+.rev p{font-family:"Fraunces",serif;font-size:1.2rem;line-height:1.4}
+.rev .who{font-size:.85rem;color:var(--muted);font-weight:600}
+.rev-sum{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:9px 14px;font-size:.88rem;background:var(--surface-2);font-weight:600}
+.pill b{color:var(--leaf);font-variant-numeric:tabular-nums}
+@media (max-width:820px){.reviews{grid-template-columns:1fr}}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:30px}
+.card h3{font-size:1.3rem;margin-bottom:18px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:12px 22px;font-size:.98rem;margin:0}
+.kv dt{color:var(--muted);font-weight:600}
+.kv dd{margin:0}
+.kv a{text-decoration:none;font-weight:700;border-bottom:2px solid var(--gold)}
+.socials{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.map{background:var(--map);color:var(--map-ink);border-radius:var(--r);padding:30px;display:grid;gap:14px;align-content:space-between;min-height:280px;position:relative;overflow:hidden}
+.map .eyebrow{color:var(--chili)}
+.map h3{font-size:1.4rem}
+.map p{color:var(--map-muted);font-size:.95rem}
+.map .grid{position:absolute;inset:0;background-image:linear-gradient(var(--map-grid) 1px,transparent 1px),linear-gradient(90deg,var(--map-grid) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
+.map .pin{position:absolute;right:34px;top:34px;width:18px;height:18px;border-radius:50%;background:var(--chili);box-shadow:0 0 0 8px rgba(224,69,43,.18)}
+.map > *:not(.grid):not(.pin){position:relative}
+@media (max-width:820px){.contact{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:.85rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+
+/* ---------- scroll-driven motion ---------- */
+:root{scroll-behavior:smooth}
+@property --n{syntax:"<integer>";inherits:false;initial-value:0}
+@media (prefers-reduced-motion:no-preference){
+ @supports (animation-timeline: view()){
+  /* generic reveal: rises as it enters the viewport */
+  @keyframes rise{from{opacity:.15;transform:translateY(48px)}to{opacity:1;transform:none}}
+  .reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 5% entry 65%}
+  .reveal.d1{animation-range:entry 15% entry 75%}
+  .reveal.d2{animation-range:entry 25% entry 85%}
+
+  /* hero: photo slowly zooms out & copy recedes as you scroll away */
+  @keyframes hero-zoom{from{transform:scale(1.12)}to{transform:scale(1)}}
+  .hero-media img{animation:hero-zoom linear both;animation-timeline:scroll(root);animation-range:0 90vh}
+  @keyframes recede{to{opacity:0;transform:translateY(-60px)}}
+  .hero-copy{animation:recede linear both;animation-timeline:scroll(root);animation-range:20vh 90vh}
+
+  /* chapters: stacked cards — each pins, the next slides over; photo focuses in; card staggers in */
+  .ch-wrap{view-timeline:--ch block;min-height:150vh}
+  .ch-wrap .chapter{position:sticky;top:0;height:100vh;min-height:0;margin-top:0;transform-origin:center top}
+  .ch-wrap:last-of-type{min-height:100vh}
+  @keyframes ch-cover{to{transform:scale(.92) translateY(-4vh);filter:brightness(.72) saturate(.8);border-radius:28px}}
+  .ch-wrap .chapter{animation:ch-cover linear both;animation-timeline:--ch;animation-range:exit 0% exit 100%}
+  .ch-wrap:last-of-type .chapter{animation:none}
+  @keyframes focus-in{from{transform:scale(1.18);filter:blur(14px) saturate(.6) brightness(1.08)}to{transform:scale(1.04);filter:blur(0) saturate(1.06) brightness(1)}}
+  .chapter .ch-media img.dish{animation:focus-in linear both;animation-timeline:--ch;animation-range:entry 0% entry 100%}
+  @keyframes rise-in{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+  @keyframes bar-in{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  .chapter .ch-card{animation:rise-in linear both;animation-timeline:--ch;animation-range:entry 35% entry 75%}
+  .chapter .ch-card > *{animation:rise-in linear both;animation-timeline:--ch}
+  .chapter .ch-card > .tag{animation-range:entry 45% entry 70%}
+  .chapter .ch-card > .kind{animation-range:entry 52% entry 77%}
+  .chapter .ch-card > h3{animation-range:entry 58% entry 85%}
+  .chapter .ch-card > .bar{animation-name:bar-in;animation-range:entry 70% entry 100%}
+  .chapter .ch-card > p{animation-range:entry 68% entry 95%}
+  .chapter .ch-card > .meta{animation-range:entry 76% contain 5%}
+  @media (max-width:820px){.ch-wrap{min-height:130vh}.ch-wrap .chapter{aspect-ratio:auto;align-items:end}}
+
+  /* dedication: pinned sequence */
+  .dedication{view-timeline:--ded block;padding-block:0;min-height:260vh}
+  .dedication .pin{position:sticky;top:0;min-height:100vh;display:grid;align-content:center;padding-block:96px;overflow:clip}
+  .dedication::before{display:none}
+  .dedication .pin::before{content:"M";position:absolute;right:-2vw;top:-6vw;font-family:"Fraunces",serif;font-weight:600;font-size:38vw;line-height:1;color:rgba(240,169,40,.12);pointer-events:none;animation:wm linear both;animation-timeline:--ded;animation-range:contain 0% contain 100%}
+  @keyframes name-in{from{opacity:0;transform:translateY(40px) scale(.6)}to{opacity:1;transform:none}}
+  @keyframes fade-up{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+  @keyframes wm{from{transform:translateY(12%) rotate(-4deg)}to{transform:translateY(-14%) rotate(3deg)}}
+  .dedication .crest,.dedication .eyebrow{animation:fade-up linear both;animation-timeline:--ded;animation-range:contain 0% contain 18%}
+  .dedication .name{transform-origin:left center;animation:name-in linear both;animation-timeline:--ded;animation-range:contain 4% contain 32%}
+  .dedication .text > *{animation:fade-up linear both;animation-timeline:--ded}
+  .dedication .text > :nth-child(1){animation-range:contain 20% contain 40%}
+  .dedication .text > :nth-child(2){animation-range:contain 34% contain 54%}
+  .dedication .text > :nth-child(3){animation-range:contain 48% contain 66%}
+  .dedication .text > :nth-child(4){animation-range:contain 60% contain 76%}
+
+  /* hours strip slides in from below the hero */
+  @keyframes strip-in{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0)}}
+  .strip{animation:strip-in linear both;animation-timeline:view();animation-range:entry 0% entry 100%}
+ }
+}
+</style>
+</head>
+<body>
+
+
+
+<header class="top">
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href="#top">
+        <svg viewBox="0 0 64 74" aria-hidden="true"><path d="M2 2h60v46L32 72 2 48Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><text x="32" y="46" text-anchor="middle">M</text></svg>
+        <span>Maximus Haven</span>
+      </a>
+      <nav class="links" aria-label="Secciones">
+        <a href="#maximus" data-i18n="nav.maximus">Maximus</a>
+        <a href="#story" data-i18n="nav.story">Historia</a>
+        <a href="#menu" data-i18n="nav.menu">Carta</a>
+        <a href="#reviews" data-i18n="nav.reviews">Opiniones</a>
+        <a href="#contact" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="controls">
+      <button class="theme" id="theme-toggle" type="button" aria-label="Cambiar tema claro/oscuro" title="Claro / Oscuro">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <div class="lang" role="group" aria-label="Idioma / Language / Wika">
+        <button id="lang-es" data-lang="es" aria-pressed="true">ES</button>
+        <button id="lang-en" data-lang="en" aria-pressed="false">EN</button>
+        <button id="lang-fil" data-lang="fil" aria-pressed="false">FIL</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="hero-media" aria-hidden="true"><img src="img/lomi.jpg" alt="" fetchpriority="high"></div>
+    <div class="wrap hero-copy">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Restaurante &amp; cafetería familiar · Tetuán, Madrid</p>
+      <h1 data-i18n-html="hero.title">Cocina filipina de casa, <em>en memoria de nuestro hijo</em></h1>
+      <p class="lead" data-i18n="hero.lead">Maximus Haven es el refugio que construimos con el nombre de Maximus. Sisig crujiente, lomi para compartir y el halo-halo del que habla todo Madrid — hecho como en casa, servido con cariño.</p>
+      <div class="ctas">
+        <a class="btn gold" href="tel:+34602586955" data-i18n="cta.call">Llamar · 602 586 955</a>
+        <a class="btn line" href="#menu" data-i18n="cta.menu">Ver la carta</a>
+      </div>
+      <div class="proof">
+        <div><b>5,0 <span class="stars" aria-hidden="true">★★★★★</span></b><small data-i18n="proof.google">512 reseñas en Google</small></div>
+        <div><b>100%</b><small data-i18n="proof.fb">recomiendan en Facebook</small></div>
+        <div><b>€10–20</b><small data-i18n="proof.price">por persona</small></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div class="wrap">
+      <div class="label"><span data-i18n="hours.title">Horario</span><small data-i18n="hours.note">Horario temporal</small></div>
+      <div class="hours">
+        <span><b data-i18n="days.monthu">Lun–Jue</b>18:00–23:00</span>
+        <span class="closed"><b data-i18n="days.fri">Vie</b><span data-i18n="hours.closed">Cerrado</span></span>
+        <span><b data-i18n="days.sat">Sáb</b>13:00–23:00</span>
+        <span><b data-i18n="days.sun">Dom</b>15:00–23:00</span>
+      </div>
+      <div class="addr"><strong>C/ Marqués de Cortina, 2 · 28020 Madrid</strong><span data-i18n="hours.metro">Metro Estación de Tetuán (L1)</span></div>
+    </div>
+  </div>
+
+  <section id="maximus" class="dedication">
+    <div class="pin">
+    <div class="wrap">
+      <div>
+        <svg class="crest" viewBox="0 0 64 74" aria-hidden="true"><path d="M2 2h60v46L32 72 2 48Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><text x="32" y="46" text-anchor="middle">M</text></svg>
+        <p class="eyebrow" data-i18n="ded.eyebrow">En memoria de</p>
+        <div class="name">Maximus</div>
+      </div>
+      <div class="text">
+        <p data-i18n="ded.p1">Este restaurante lleva el nombre de nuestro hijo Maximus. Él es la razón por la que existe este lugar.</p>
+        <p data-i18n="ded.p2">“Haven” significa refugio. Quisimos construir un sitio donde cualquiera pueda sentarse, comer como en casa y sentirse acompañado — la misma calidez que él nos dio a nosotros. Cada mesa servida es una forma de mantener vivo su nombre.</p>
+        <p data-i18n="ded.p3">Cuando pruebes nuestro Sisig Max o el Halo-Halo Maxi, ya sabes por quién se llaman así.</p>
+        <p class="fill"><b data-i18n="ded.fill.b">Para la familia:</b> <span data-i18n="ded.fill">aquí irá lo que queráis contar de Maximus — quién era, qué le gustaba, una foto suya si os apetece compartirla. Este texto es provisional hasta que nos lo contéis.</span></p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="story">
+    <div class="pin">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <p class="eyebrow" data-i18n="story.eyebrow">Nuestra historia</p>
+          <h2 data-i18n="story.title">De una pequeña cocina a un sueño con su nombre</h2>
+        </div>
+        <p data-i18n="story.intro">Maximus Haven nació como “Lutong Bahay” — comida casera filipina — en plena pandemia. Cocinábamos cada día y llevábamos los platos a casa de quien no podía salir. El sueño era tener un lugar propio, con el nombre de nuestro hijo. Hoy ese lugar existe.</p>
+      </div>
+      <div class="timeline">
+        <article class="stage reveal ">
+          <div class="yr">2020</div>
+          <h3 data-i18n="story.s1.h">Lutong Bahay</h3>
+          <p data-i18n="story.s1.p">Una cocina doméstica, entregas diarias y una comunidad filipina en Madrid que confió en nosotros cuando nadie podía salir de casa.</p>
+        </article>
+        <article class="stage reveal d1">
+          <div class="yr">2021–24</div>
+          <h3 data-i18n="story.s2.h">Pruebas, cansancio y no rendirse</h3>
+          <p data-i18n="story.s2.p">Hubo días sin saber a dónde nos llevaría todo esto. Cada pedido, cada visita y cada recomendación fue parte de la respuesta.</p>
+        </article>
+        <article class="stage reveal d2">
+          <div class="yr">2025</div>
+          <h3 data-i18n="story.s3.h">Abre Maximus Haven, Tetuán</h3>
+          <p data-i18n="story.s3.p">La misma comida hecha con corazón, ahora en nuestra propia mesa y con el nombre de nuestro hijo en la puerta. En mayo de 2026 celebramos el primer año dando gracias a Dios y a cada persona que se sentó con nosotros.</p>
+        </article>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <p class="eyebrow" data-i18n="menu.eyebrow">Carta</p>
+          <h2 data-i18n="menu.title">Los platos que la gente vuelve a pedir</h2>
+        </div>
+        <p data-i18n="menu.intro">Comfort food filipino con raciones generosas, pensado para compartir. Estos son los favoritos según más de 500 reseñas de clientes.</p>
+      </div>
+    </div>
+
+    <div class="ch-wrap">
+    <article class="chapter" style="--accent:#D9952E;--accent-ink:#1B1A17">
+      <div class="ch-media"><img class="dish" src="img/lomi.jpg" alt="Lomi — fideos con huevo, chicharrón y lumpia" loading="lazy"></div>
+      <div class="ch-card">
+        <span class="tag" data-i18n="menu.tag.fav">El más pedido</span>
+        <span class="kind" data-i18n="menu.d2.kind">Sopa de fideos</span>
+        <h3>Lomi</h3>
+        <span class="bar" aria-hidden="true"></span>
+        <p data-i18n="menu.d2.p">Fideos gruesos de huevo en un caldo espeso y reconfortante, con carne, huevo y verduras. Mencionado en 93 reseñas.</p>
+        <div class="meta"><span data-i18n="menu.d2.share">Un bol da para 4</span><span data-i18n="menu.hot">Caliente</span></div>
+      </div>
+    </article>
+    </div>
+
+    <div class="ch-wrap">
+    <article class="chapter flip" style="--accent:#7A4FB5;--accent-ink:#fff">
+      <div class="ch-media"><img class="dish" src="img/halo.jpg" alt="Halo-Halo Maxi con helado de ube" loading="lazy"></div>
+      <div class="ch-card">
+        <span class="tag" data-i18n="menu.tag.dessert">Postre</span>
+        <span class="kind" data-i18n="menu.d3.kind">Postre helado</span>
+        <h3>Halo-Halo Maxi</h3>
+        <span class="bar" aria-hidden="true"></span>
+        <p data-i18n="menu.d3.p">Hielo picado, leche, judías dulces, frutas, leche flan y helado de ube. Nuestros clientes dicen que es el mejor de Madrid.</p>
+        <div class="meta"><span data-i18n="menu.d3.share">Perfecto en verano</span><span>Ube</span></div>
+      </div>
+    </article>
+    </div>
+
+    <div class="ch-wrap">
+    <article class="chapter" style="--accent:#E0452B;--accent-ink:#fff">
+      <div class="ch-media"><img class="dish" src="img/sisig.jpg" alt="Sisig Max chisporroteando con huevo y chile" loading="lazy"></div>
+      <div class="ch-card">
+        <span class="tag" data-i18n="menu.tag.star">Estrella</span>
+        <span class="kind" data-i18n="menu.d1.kind">Para compartir</span>
+        <h3>Sisig Max</h3>
+        <span class="bar" aria-hidden="true"></span>
+        <p data-i18n="menu.d1.p">Cerdo picado a la plancha, crujiente y recién hecho, con cebolla, chile y calamansi. Llega chisporroteando a la mesa.</p>
+        <div class="meta"><span data-i18n="menu.d1.share">Ración para 3–4</span><span data-i18n="menu.sizzling">Sizzling</span></div>
+      </div>
+    </article>
+    </div>
+
+    <div class="ch-wrap">
+    <article class="chapter flip" style="--accent:#B9682A;--accent-ink:#fff">
+      <div class="ch-media"><img class="dish" src="img/pork.jpg" alt="Lechon kawali crujiente con arroz y ensalada de ampalaya" loading="lazy"></div>
+      <div class="ch-card">
+        <span class="tag" data-i18n="band.eyebrow">De la cocina</span>
+        <span class="kind" data-i18n="menu.d7.kind">Plato principal</span>
+        <h3>Lechon Kawali</h3>
+        <span class="bar" aria-hidden="true"></span>
+        <p data-i18n="band.p">Panceta frita hasta quedar crujiente, arroz con ajo y ensalada de ampalaya.</p>
+        <div class="meta"><span data-i18n="menu.crispy">Crujiente</span><span data-i18n="menu.rice">Con arroz</span></div>
+      </div>
+    </article>
+    </div>
+
+    <div class="wrap">
+      <div class="more reveal">
+        <div class="item reveal "><span class="dot"></span><div><h3>Pancit</h3><p data-i18n="menu.d4.p">Fideos salteados con verduras y carne, el clásico de toda celebración filipina.</p></div></div>
+        <div class="item reveal d1"><span class="dot"></span><div><h3>Chicken Katsu</h3><p data-i18n="menu.d5.p">Pollo empanado crujiente con arroz y salsa katsu casera.</p></div></div>
+        <div class="item reveal d2"><span class="dot"></span><div><h3>Laksa &amp; Ramen</h3><p data-i18n="menu.d6.p">Caldos especiados y fideos para los días de frío, con el toque de la casa.</p></div></div>
+      </div>
+      <div class="menu-foot reveal">
+        <div>
+          <p class="eyebrow" data-i18n="menu.daily">Menú del día</p>
+          <p class="price">13,50 €</p>
+        </div>
+        <p data-i18n="menu.foot">Combina tu plato como quieras. También café y repostería en la cafetería, y reservas para grupos de 30–35 personas por la mañana de lunes a sábado.</p>
+        <span class="badge-pending" data-i18n="menu.pending">Carta completa con precios: próximamente</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <p class="eyebrow" data-i18n="rev.eyebrow">Opiniones</p>
+          <h2 data-i18n="rev.title">5,0 en Google. No es casualidad.</h2>
+        </div>
+        <p data-i18n="rev.intro">Más de 500 personas han dejado su opinión en Google y coinciden: comida abundante, precios justos y una familia que te trata como en casa.</p>
+      </div>
+      <div class="reviews">
+        <article class="rev reveal "><div class="stars" aria-hidden="true">★★★★★</div><p data-i18n="rev.r1">El sisig es lo mejor: crujiente, recién hecho y la ración da para tres o cuatro. Y el lomi, imprescindible.</p><div class="who">Dorothy · Google</div></article>
+        <article class="rev reveal d1"><div class="stars" aria-hidden="true">★★★★★</div><p data-i18n="rev.r2">Después de cinco años en Madrid, puedo decir que este es el restaurante filipino con el mejor halo-halo.</p><div class="who">Remalyne · Google</div></article>
+        <article class="rev reveal d2"><div class="stars" aria-hidden="true">★★★★★</div><p data-i18n="rev.r3">Pedimos un solo lomi para probar, éramos cuatro y no pudimos terminarlo. Delicioso y muy buena relación calidad-precio.</p><div class="who">Nadine · Google</div></article>
+      </div>
+      <div class="rev-sum reveal">
+        <span class="pill"><b class="count" style="--to:512"><span>512</span></b> <span data-i18n="rev.p1">reseñas en Google</span></span>
+        <span class="pill"><b class="count" style="--to:93"><span>93</span></b> <span data-i18n="rev.p4">mencionan el lomi</span></span>
+        <span class="pill"><b class="count" style="--to:27"><span>27</span></b> <span data-i18n="rev.p5">mencionan el halo-halo</span></span>
+        <span class="pill"><b>100%</b> <span data-i18n="rev.p2">recomiendan en Facebook</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <p class="eyebrow" data-i18n="contact.eyebrow">Contacto</p>
+          <h2 data-i18n="contact.title">Te esperamos en Tetuán</h2>
+        </div>
+        <p data-i18n="contact.intro">Comida en el local, para llevar o a domicilio. Para grupos grandes, llámanos y lo organizamos.</p>
+      </div>
+      <div class="contact">
+        <div class="card reveal">
+          <h3 data-i18n="contact.card">Reservas y pedidos</h3>
+          <dl class="kv">
+            <dt data-i18n="contact.phone">Teléfono</dt><dd><a href="tel:+34910426268">910 42 62 68</a></dd>
+            <dt data-i18n="contact.mobile">Móvil / WhatsApp</dt><dd><a href="https://wa.me/34602586955" target="_blank" rel="noopener">602 586 955</a></dd>
+            <dt data-i18n="contact.address">Dirección</dt><dd>C/ Marqués de Cortina, 2 · 28020 Madrid</dd>
+            <dt data-i18n="contact.metro">Metro</dt><dd data-i18n="contact.metro.v">Estación de Tetuán (Línea 1)</dd>
+            <dt data-i18n="contact.delivery">A domicilio</dt><dd><a href="https://glovoapp.com/es/es/madrid/" target="_blank" rel="noopener">Glovo</a></dd>
+            <dt data-i18n="contact.langs">Hablamos</dt><dd>Español · English · Filipino</dd>
+          </dl>
+          <div class="socials">
+            <a class="btn line" href="https://www.facebook.com/profile.php?id=61576300011624" target="_blank" rel="noopener">Facebook</a>
+            <a class="btn line" href="https://www.instagram.com/maximushaven.ofc/" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+        <div class="map reveal d1">
+          <div class="grid" aria-hidden="true"></div><div class="pin" aria-hidden="true"></div>
+          <div>
+            <p class="eyebrow" data-i18n="map.eyebrow">Cómo llegar</p>
+            <h3 data-i18n="map.title">Barrio de Tetuán, a un paso del metro</h3>
+            <p data-i18n="map.p">Calle Marqués de Cortina 2, junto a la estación de Tetuán (L1). Abre el mapa para ver la ruta desde donde estés.</p>
+          </div>
+          <a class="btn gold" style="justify-self:start" href="https://www.google.com/maps/search/?api=1&query=Maximus+Haven+Calle+Marqu%C3%A9s+de+Cortina+2+28020+Madrid" target="_blank" rel="noopener" data-i18n="map.cta">Abrir en Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Maximus Haven restaurante &amp; cafetería · Madrid</span>
+    <span data-i18n="footer.tag">Lutong may puso at pagmamahal — cocinado con corazón.</span>
+  </div>
+</footer>
+
+<script>
+const I18N = {
+  en: {
+    "nav.maximus":"Maximus","nav.story":"Story","nav.menu":"Menu","nav.reviews":"Reviews","nav.contact":"Contact",
+    "hero.eyebrow":"Family restaurant & café · Tetuán, Madrid",
+    "hero.title":"Filipino home cooking, <em>in memory of our son</em>",
+    "hero.lead":"Maximus Haven is the haven we built in Maximus's name. Crispy sisig, lomi made for sharing and the halo-halo all of Madrid talks about — cooked like home, served with heart.",
+    "cta.call":"Call · 602 586 955","cta.menu":"See the menu",
+    "proof.google":"512 Google reviews","proof.fb":"recommend on Facebook","proof.price":"per person",
+        "hours.title":"Hours","hours.note":"Temporary hours","days.monthu":"Mon–Thu","days.fri":"Fri","days.sat":"Sat","days.sun":"Sun","hours.closed":"Closed","hours.metro":"Metro Estación de Tetuán (L1)",
+    "ded.eyebrow":"In memory of",
+    "ded.p1":"This restaurant carries the name of our son Maximus. He is the reason this place exists.",
+    "ded.p2":"A haven is a safe place. We wanted to build somewhere anyone can sit down, eat like they're at home and feel accompanied — the same warmth he gave us. Every table we serve is a way of keeping his name alive.",
+    "ded.p3":"When you try our Sisig Max or the Halo-Halo Maxi, now you know who they're named after.",
+    "ded.fill.b":"For the family:","ded.fill":"this is where you'll tell people about Maximus — who he was, what he loved, a photo if you'd like to share one. This text is a placeholder until you tell us.",
+    "story.eyebrow":"Our story","story.title":"From a tiny kitchen to a dream with his name",
+    "story.intro":"Maximus Haven began as “Lutong Bahay” — Filipino home cooking — at the height of the pandemic. We cooked every day and delivered to those who couldn't leave home. The dream was a place of our own, named after our son. Today that place exists.",
+    "story.s1.h":"Lutong Bahay","story.s1.p":"A home kitchen, daily deliveries, and a Filipino community in Madrid that trusted us when nobody could go out.",
+    "story.s2.h":"Trials, exhaustion and not giving up","story.s2.p":"There were days we didn't know where this dream would take us. Every order, every visit, every recommendation was part of the answer.",
+    "story.s3.h":"Maximus Haven opens in Tetuán","story.s3.p":"The same food cooked with heart, now at our own table, with our son's name above the door. In May 2026 we celebrated our first year, giving thanks to God and to everyone who sat with us.",
+    "band.eyebrow":"From the kitchen","band.p":"Pork belly fried until crackling, garlic rice and a bitter-melon salad.",
+    "menu.eyebrow":"Menu","menu.title":"The dishes people come back for","menu.intro":"Filipino comfort food in generous portions, made for sharing. These are the favourites according to 500+ customer reviews.",
+    "menu.tag.fav":"Most ordered","menu.tag.dessert":"Dessert","menu.tag.star":"Signature","menu.hot":"Hot","menu.sizzling":"Sizzling","menu.d7.kind":"Main","menu.crispy":"Crackling","menu.rice":"With rice",
+    "menu.d2.kind":"Noodle soup","menu.d2.p":"Thick egg noodles in a rich, comforting broth with meat, egg and vegetables. Mentioned in 93 reviews.","menu.d2.share":"One bowl feeds 4",
+    "menu.d3.kind":"Iced dessert","menu.d3.p":"Shaved ice, milk, sweet beans, fruit, leche flan and ube ice cream. Our customers say it's the best in Madrid.","menu.d3.share":"Perfect in summer",
+    "menu.d1.kind":"To share","menu.d1.p":"Sizzling chopped pork, crispy and freshly cooked, with onion, chilli and calamansi. Arrives sizzling at the table.","menu.d1.share":"Serves 3–4",
+    "menu.d4.p":"Stir-fried noodles with vegetables and meat — the classic of every Filipino celebration.",
+    "menu.d5.p":"Crispy breaded chicken with rice and house katsu sauce.",
+    "menu.d6.p":"Spiced broths and noodles for cold days, with a house twist.",
+    "menu.daily":"Lunch menu","menu.foot":"Build your plate the way you like. Coffee and pastries in the café too, and group bookings for 30–35 people in the mornings, Monday to Saturday.","menu.pending":"Full menu with prices: coming soon",
+    "rev.eyebrow":"Reviews","rev.title":"5.0 on Google. No accident.","rev.intro":"More than 500 people have reviewed us on Google and they agree: generous food, fair prices and a family that treats you like one of their own.",
+    "rev.r1":"The sisig is the highlight: crispy, freshly cooked, and one serving feeds three or four. And the lomi is a must.",
+    "rev.r2":"After five years living in Madrid, I can say this is the Filipino restaurant with the best halo-halo by far.",
+    "rev.r3":"We ordered a single lomi to try — there were four of us and we still couldn't finish it. Delicious and great value.",
+    "rev.p1":"Google reviews","rev.p4":"mention the lomi","rev.p5":"mention the halo-halo","rev.p2":"recommend on Facebook",
+    "contact.eyebrow":"Contact","contact.title":"See you in Tetuán","contact.intro":"Dine in, take away or get it delivered. For large groups, give us a call and we'll sort it out.",
+    "contact.card":"Bookings & orders","contact.phone":"Phone","contact.mobile":"Mobile / WhatsApp","contact.address":"Address","contact.metro":"Metro","contact.metro.v":"Estación de Tetuán (Line 1)","contact.delivery":"Delivery","contact.langs":"We speak",
+    "map.eyebrow":"Getting here","map.title":"Tetuán neighbourhood, steps from the metro","map.p":"Calle Marqués de Cortina 2, next to Tetuán station (L1). Open the map for directions from wherever you are.","map.cta":"Open in Google Maps",
+    "footer.tag":"Lutong may puso at pagmamahal — cooked with heart."
+  },
+  fil: {
+    "nav.maximus":"Maximus","nav.story":"Kwento","nav.menu":"Menu","nav.reviews":"Mga review","nav.contact":"Kontak",
+    "hero.eyebrow":"Family restaurant & cafetería · Tetuán, Madrid",
+    "hero.title":"Lutong-bahay na Pinoy, <em>sa alaala ng aming anak</em>",
+    "hero.lead":"Ang Maximus Haven ay ang kanlungang itinayo namin sa pangalan ni Maximus. Malutong na sisig, lomi na pang-share, at ang halo-halo na pinag-uusapan ng buong Madrid — lutong-bahay, hinain nang may puso.",
+    "cta.call":"Tumawag · 602 586 955","cta.menu":"Tingnan ang menu",
+    "proof.google":"512 review sa Google","proof.fb":"nagrerekomenda sa Facebook","proof.price":"kada tao",
+        "hours.title":"Oras","hours.note":"Pansamantalang oras","days.monthu":"Lun–Huw","days.fri":"Biy","days.sat":"Sab","days.sun":"Lin","hours.closed":"Sarado","hours.metro":"Metro Estación de Tetuán (L1)",
+    "ded.eyebrow":"Sa alaala ni",
+    "ded.p1":"Ang restaurant na ito ay may pangalan ng aming anak na si Maximus. Siya ang dahilan kung bakit narito ang lugar na ito.",
+    "ded.p2":"Ang “haven” ay kanlungan. Gusto naming magtayo ng lugar kung saan kahit sino ay makakaupo, makakakain na parang nasa bahay, at hindi mag-iisa — ang parehong init na ibinigay niya sa amin. Bawat mesang inihahain namin ay paraan para manatiling buhay ang kanyang pangalan.",
+    "ded.p3":"Kapag natikman mo ang aming Sisig Max o ang Halo-Halo Maxi, alam mo na kung kanino ito ipinangalan.",
+    "ded.fill.b":"Para sa pamilya:","ded.fill":"dito ilalagay ang gusto ninyong ikuwento tungkol kay Maximus — sino siya, ano ang gusto niya, at larawan niya kung nais ninyong ibahagi. Pansamantala ang tekstong ito hanggang sabihin ninyo sa amin.",
+    "story.eyebrow":"Aming kwento","story.title":"Mula sa munting kusina… hanggang sa pangarap na may pangalan niya",
+    "story.intro":"Noong kasagsagan ng pandemic 2020, bahay lang ang aming kusina. Nagluluto kami araw-araw at nagde-deliver para maabot ang mga hindi makalabas. Pangarap lang noon ang magkaroon ng sariling lugar na may pangalan ng aming anak. Ngayon, narito na ito.",
+    "story.s1.h":"Lutong Bahay","story.s1.p":"Isang kusina sa bahay, araw-araw na delivery, at komunidad ng mga Pilipino sa Madrid na nagtiwala sa amin noong walang makalabas.",
+    "story.s2.h":"Pagsubok, pagod, at hindi pagsuko","story.s2.p":"May mga araw na hindi namin alam kung saan kami dadalhin ng pangarap na ito. Bawat order, bawat bisita, bawat recommendation — bahagi kayo ng sagot.",
+    "story.s3.h":"Bumukas ang Maximus Haven sa Tetuán","story.s3.p":"Pareho pa ring lutong may puso, ngayon sa sarili naming hapag, at nasa pinto ang pangalan ng aming anak. Noong Mayo 2026, ipinagdiwang namin ang unang taon nang may pasasalamat sa Diyos at sa bawat umupo kasama namin.",
+    "band.eyebrow":"Mula sa kusina","band.p":"Liempo na pinirito hanggang lumutong, sinangag at ensaladang ampalaya.",
+    "menu.eyebrow":"Menu","menu.title":"Mga putaheng binabalik-balikan","menu.intro":"Pinoy comfort food na sagana ang serving at pang-share. Ito ang mga paborito ayon sa 500+ review ng aming mga customer.",
+    "menu.tag.fav":"Pinakabinibili","menu.tag.dessert":"Panghimagas","menu.tag.star":"Signature","menu.hot":"Mainit","menu.sizzling":"Sizzling","menu.d7.kind":"Ulam","menu.crispy":"Malutong","menu.rice":"May kanin",
+    "menu.d2.kind":"Sabaw na pansit","menu.d2.p":"Makapal na egg noodles sa malapot at nakakabusog na sabaw, may karne, itlog at gulay. Binanggit sa 93 review.","menu.d2.share":"Isang mangkok, apat ang busog",
+    "menu.d3.kind":"Panghimagas","menu.d3.p":"Kinaskas na yelo, gatas, minatamis na beans, prutas, leche flan at ube ice cream. Sabi ng mga customer, pinakamasarap sa Madrid.","menu.d3.share":"Perpekto sa tag-init",
+    "menu.d1.kind":"Pang-share","menu.d1.p":"Sizzling na tinadtad na baboy, malutong at bagong luto, may sibuyas, sili at kalamansi. Umuusok pa pagdating sa mesa.","menu.d1.share":"Para sa 3–4",
+    "menu.d4.p":"Ginisang pansit na may gulay at karne — klasiko sa bawat handaan.",
+    "menu.d5.p":"Malutong na breaded chicken na may kanin at homemade katsu sauce.",
+    "menu.d6.p":"Maanghang na sabaw at noodles para sa malamig na araw, may sariling twist.",
+    "menu.daily":"Menú del día","menu.foot":"Combina tu plato — pili ka ng gusto mo. May kape at pastries din, at tumatanggap ng reservation para sa grupo ng 30–35 tuwing umaga, Lunes hanggang Sabado.","menu.pending":"Buong menu na may presyo: malapit na",
+    "rev.eyebrow":"Mga review","rev.title":"5.0 sa Google. Hindi aksidente.","rev.intro":"Mahigit 500 na ang nag-review sa Google at iisa ang sabi: saganang pagkain, patas na presyo, at pamilyang tumatrato sa inyo na parang kapamilya.",
+    "rev.r1":"Ang sisig ang highlight: malutong, bagong luto, at kasya sa tatlo o apat ang isang order. At ang lomi — dapat subukan.",
+    "rev.r2":"Limang taon na ako sa Madrid, at masasabi kong ito ang Filipino restaurant na may pinakamasarap na halo-halo.",
+    "rev.r3":"Isang lomi lang ang inorder namin para tikman — apat kami at hindi pa namin naubos. Masarap at sulit.",
+    "rev.p1":"review sa Google","rev.p4":"bumanggit ng lomi","rev.p5":"bumanggit ng halo-halo","rev.p2":"nagrerekomenda sa Facebook",
+    "contact.eyebrow":"Kontak","contact.title":"Hihintayin namin kayo sa Tetuán","contact.intro":"Dine-in, take-away o delivery. Para sa malaking grupo, tumawag lang at aasikasuhin namin.",
+    "contact.card":"Reservation at order","contact.phone":"Telepono","contact.mobile":"Mobile / WhatsApp","contact.address":"Address","contact.metro":"Metro","contact.metro.v":"Estación de Tetuán (Línea 1)","contact.delivery":"Delivery","contact.langs":"Nagsasalita kami ng",
+    "map.eyebrow":"Paano pumunta","map.title":"Barrio de Tetuán, ilang hakbang mula sa metro","map.p":"Calle Marqués de Cortina 2, katabi ng estasyon ng Tetuán (L1). Buksan ang mapa para sa direksyon mula sa kinaroroonan mo.","map.cta":"Buksan sa Google Maps",
+    "footer.tag":"Lutong may puso at pagmamahal."
+  }
+};
+const ES = {};
+document.querySelectorAll("[data-i18n]").forEach(el=>ES[el.dataset.i18n]=el.textContent);
+document.querySelectorAll("[data-i18n-html]").forEach(el=>ES[el.dataset.i18nHtml]=el.innerHTML);
+I18N.es = ES;
+function setLang(l){
+  const d = I18N[l] || ES;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{ const v=d[el.dataset.i18n]; if(v!=null) el.textContent=v; });
+  document.querySelectorAll("[data-i18n-html]").forEach(el=>{ const v=d[el.dataset.i18nHtml]; if(v!=null) el.innerHTML=v; });
+  document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.lang===l)));
+  document.documentElement.lang = l;
+  try{ localStorage.setItem("mh-lang", l); }catch(e){}
+}
+document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
+const tt=document.getElementById("theme-toggle");
+function setTheme(t){ if(t==="dark") document.documentElement.setAttribute("data-theme","dark"); else document.documentElement.removeAttribute("data-theme"); try{ localStorage.setItem("mh-theme",t); }catch(e){} }
+tt.addEventListener("click",()=>setTheme(document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark"));
+try{ if(localStorage.getItem("mh-theme")==="dark") setTheme("dark"); }catch(e){}
+let saved=null; try{ saved=localStorage.getItem("mh-lang"); }catch(e){}
+if(saved && I18N[saved]) setLang(saved);
+</script>
+
+</body>
+</html>
