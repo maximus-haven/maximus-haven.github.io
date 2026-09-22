@@ -26,7 +26,7 @@
 <meta name="twitter:description" content="Lomi, Sisig Max y el mejor Halo-Halo de Madrid. Cocina filipina hecha en casa.">
 <meta name="twitter:image" content="https://maximus-haven.github.io/img/lomi.jpg">
 
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.png" type="image/png" sizes="64x64">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 <!-- Datos para Google (ficha de restaurante) -->
@@ -150,9 +150,12 @@ img,svg{max-width:100%;display:block}
 /* nav */
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;padding-block:14px}
 .top .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;background:color-mix(in srgb,var(--surface) 82%,transparent);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:999px;padding:8px 8px 8px 16px;box-shadow:0 8px 30px -18px rgba(0,0,0,.35)}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Fraunces",serif;font-weight:600;font-size:1.05rem}
-.brand svg{width:26px;color:var(--gold)}
-.brand text{font-family:"Fraunces",serif;font-weight:600;font-size:38px;fill:currentColor}
+.brand{display:flex;align-items:center;text-decoration:none;padding:2px 4px}
+/* the wordmark artwork is white; invert it on the light theme */
+.logo{height:32px;width:auto;filter:invert(1);transition:opacity .15s ease}
+:root[data-theme="dark"] .logo{filter:none}
+.brand:hover .logo{opacity:.75}
+@media (max-width:420px){.logo{height:26px}}
 nav.links{display:flex;gap:4px}
 nav.links a{text-decoration:none;color:var(--muted);font-weight:600;font-size:.9rem;padding:8px 12px;border-radius:999px}
 nav.links a:hover{color:var(--ink);background:var(--surface-2)}
@@ -373,8 +376,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
   <div class="wrap">
     <div class="bar">
       <a class="brand" href="#top">
-        <svg viewBox="0 0 64 74" aria-hidden="true"><path d="M2 2h60v46L32 72 2 48Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><text x="32" y="46" text-anchor="middle">M</text></svg>
-        <span>Maximus Haven</span>
+        <img class="logo" src="img/logo.png" width="309" height="120" alt="Maximus Haven">
       </a>
       <nav class="links" aria-label="Secciones">
         <a href="#maximus" data-i18n="nav.maximus">Maximus</a>
@@ -434,7 +436,6 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
     <div class="pin">
     <div class="wrap">
       <div>
-        <svg class="crest" viewBox="0 0 64 74" aria-hidden="true"><path d="M2 2h60v46L32 72 2 48Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><text x="32" y="46" text-anchor="middle">M</text></svg>
         <p class="eyebrow" data-i18n="ded.eyebrow">En memoria de</p>
         <div class="name">Maximus</div>
       </div>
